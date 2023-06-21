@@ -1,6 +1,7 @@
 <h1>🦕 Index Dinosaurs 🦖</h1>
 <ul>
   <% @dinosaurs.each do |dinosaur| %>
-    <li><%= dinosaur.name.capitalize %></li>
+    <li><%= link_to dinosaur.name.capitalize, dinosaur_path(dinosaur) %></li>
   <%end %>
 </ul>
+<%= link_to "New", dinosaurs_new_path %>
