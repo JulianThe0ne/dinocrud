@@ -1,7 +1,12 @@
-<h1>🦕 Index Dinosaurs 🦖</h1>
-<ul>
-  <% @dinosaurs.each do |dinosaur| %>
-    <li><%= link_to dinosaur.name.capitalize, dinosaur_path(dinosaur) %></li>
-  <%end %>
-</ul>
-<%= link_to "New", new_dinosaur_path %>
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+  <h1>🦕 Index Dinosaurs 🦖</h1>
+  <p><%= link_to "Carnivorous Dinosaurs 🥩🦖", carnivorous_dinosaurs_path %></p>
+  <hr>
+  <ul>
+    <% @dinosaurs.each do |dinosaur| %>
+      <li><%= link_to dinosaur.name.capitalize, dinosaur_path(dinosaur) %></li>
+    <%end %>
+  </ul>
+  <%= link_to "New", new_dinosaur_path %>
+</div>

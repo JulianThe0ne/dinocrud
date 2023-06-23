@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  resources :dinosaurs
+  resources :dinosaurs do
+    collection do
+      get :carnivorous
+      get :herbivorous
+      # get "carnivorous", to: "dinosaurs#carnivorous", as: :carnivorous_dinosaurs
+    end
+  end
   # get 'dinosaurs', to: 'dinosaurs#index'
   # get 'dinosaurs/new', to: 'dinosaurs#new'
   # get 'dinosaurs/:id', to: 'dinosaurs#show', as: :dinosaur

@@ -2,6 +2,7 @@
 <p>Group: <%= @dinosaur.group.capitalize %></p>
 <p>Japanese: <%= @dinosaur.japanese %></p>
 <%= link_to "Back⬅", dinosaurs_path %> |
+<%= link_to "Edit", edit_dinosaur_path(@dinosaur) %>
 <%= link_to "Delete",
 dinosaur_path(@dinosaur),
 data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>

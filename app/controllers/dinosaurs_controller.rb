@@ -4,6 +4,14 @@ class DinosaursController < ApplicationController
     @dinosaurs = Dinosaur.all
   end
 
+  def carnivorous
+    @dinosaurs = Dinosaur.where(group: 'carnivorous')
+  end
+
+  def herbivorous
+    @dinosaurs = Dinosaur.where(group: 'herbivorous')
+  end
+
   def show
   end
 

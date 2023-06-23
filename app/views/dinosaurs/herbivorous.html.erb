@@ -1,0 +1,20 @@
+<div class="container">
+  <h1> 🌿 Herbivorous Dinosaurs 🌿 </h1>
+  <div id="dinosaurs">
+    <% @dinosaurs.each do |dinosaur| %>
+      <p>
+        <strong>Name:</strong> <%= dinosaur.name.capitalize %>
+      </p>
+      <p>
+        <strong>Group:</strong> <%= dinosaur.group.capitalize %>
+      </p>
+      <p>
+        <strong>Japanese:</strong> <%= dinosaur.japanese %>
+      </p>
+      <p>
+        <%= link_to "Show this 🌿🦕", dinosaur %>
+      </p>
+      <hr>
+    <% end %>
+  </div>
+</div>
