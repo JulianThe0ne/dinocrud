@@ -1,6 +1,8 @@
 <h1><%= @dinosaur.name.capitalize %></h1>
 <p>Group: <%= @dinosaur.group.capitalize %></p>
 <p>Japanese: <%= @dinosaur.japanese %></p>
+<i class="fa-solid fa-heart"></i>
+<br>
 <p><strong>Comments</strong></p>
 <%= link_to "Add comment", new_dinosaur_comment_path(@dinosaur)  %>
 <ul class="list-group">

@@ -1,6 +1,8 @@
 <div class="container">
   <p style="color: green"><%= notice %></p>
   <h1>🦕 Index Dinosaurs 🦖</h1>
+  <%= image_tag "dinosaur-logo.svg", alt: "Dino 8 bit logo", width: 50 %>
+  <p> 🗯️ Rrrrrrrrrrrrrrrrrr 🗯️ </p>
   <p><%= link_to "Carnivorous Dinosaurs 🥩🦖", carnivorous_dinosaurs_path %></p>
   <p><%= link_to "Herbivorous Dinosaurs 🌿🦕", herbivorous_dinosaurs_path %></p>
   <hr>
@@ -10,4 +12,7 @@
     <%end %>
   </ul>
   <%= link_to "New", new_dinosaur_path %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    Breakfast
+  </div>
 </div>
