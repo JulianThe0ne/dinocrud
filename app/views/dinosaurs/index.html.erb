@@ -1,18 +1,30 @@
 <div class="container">
-  <p style="color: green"><%= notice %></p>
-  <h1>🦕 Index Dinosaurs 🦖</h1>
-  <%= image_tag "dinosaur-logo.svg", alt: "Dino 8 bit logo", width: 50 %>
-  <p> 🗯️ Rrrrrrrrrrrrrrrrrr 🗯️ </p>
-  <p><%= link_to "Carnivorous Dinosaurs 🥩🦖", carnivorous_dinosaurs_path %></p>
-  <p><%= link_to "Herbivorous Dinosaurs 🌿🦕", herbivorous_dinosaurs_path %></p>
-  <hr>
-  <ul>
-    <% @dinosaurs.each do |dinosaur| %>
-      <li><%= link_to dinosaur.name.capitalize, dinosaur_path(dinosaur) %></li>
-    <%end %>
-  </ul>
-  <%= link_to "New", new_dinosaur_path %>
-  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
-    Breakfast
+  <%# Banner %>
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://djm-aaa1.kxcdn.com/resources/upload/products/71XDgIw333L._AC_SL1000_.jpg);">
+    <div class="container">
+      <h1>Dinocrud <strong>for all</strong> who <strong>loves dinosaurs</strong>!</h1>
+      <p>Change your life and love dinosaurs</p>
+      <a class="btn btn-flat" href= <%= new_dinosaur_path %> >Add a Dinosaur</a>
+    </div>
   </div>
+  <%# Banner end %>
+  <p style="color: green"><%= notice %></p>
+  <p> 🗯️ Rrrrrrrrrrrrrrrrrr 🗯️ </p>
+  <%# <p><%= link_to "Carnivorous Dinosaurs 🥩🦖", carnivorous_dinosaurs_path %></p>
+<%# <p><%= link_to "Herbivorous Dinosaurs 🌿🦕", herbivorous_dinosaurs_path %></p>
+<hr>
+<ul>
+  <% @dinosaurs.each do |dinosaur| %>
+    <li><%= link_to dinosaur.name.capitalize, dinosaur_path(dinosaur) %></li>
+  <%end %>
+</ul>
+<%# <%= link_to "New", new_dinosaur_path %>
+<%# Test  %>
+<div class="cards">
+  <% @dinosaurs.each do |dinosaur| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= link_to dinosaur.name.capitalize, dinosaur_path(dinosaur) %>
+    </div>
+  <%end %>
+</div>
 </div>
