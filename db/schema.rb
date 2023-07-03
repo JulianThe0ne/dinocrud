@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_23_141755) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_03_073047) do
   create_table "comments", force: :cascade do |t|
     t.text "content"
     t.integer "dinosaur_id", null: false
@@ -25,6 +25,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_23_141755) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "japanese"
+    t.string "image"
   end
 
   add_foreign_key "comments", "dinosaurs"
