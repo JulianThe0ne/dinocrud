@@ -22,7 +22,7 @@
 <%# Test  %>
 <div class="cards">
   <% @dinosaurs.each do |dinosaur| %>
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= dinosaur.image ? cl_image_path(dinosaur.image.key) : 'https://djm-aaa1.kxcdn.com/resources/upload/products/71XDgIw333L._AC_SL1000_.jpg' %>)">
       <%= link_to dinosaur.name.capitalize, dinosaur_path(dinosaur) %>
     </div>
   <%end %>

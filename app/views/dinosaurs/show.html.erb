@@ -1,6 +1,7 @@
 <h1><%= @dinosaur.name.capitalize %></h1>
 <p>Group: <%= @dinosaur.group.capitalize %></p>
 <p>Japanese: <%= @dinosaur.japanese %></p>
+<p>Image: <%= @dinosaur.image %> </p>
 <i class="fa-solid fa-heart"></i>
 <br>
 <p><strong>Comments</strong></p>
@@ -9,9 +10,7 @@
   <% @dinosaur.comments.each do |comment| %>
     <li class="list-group-item">
       <%= comment.content %>
-      <%= link_to "Delete",
-    comment_path(comment),
-    data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
+      <%= link_to "Delete", comment_path(comment), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
   %>
     </li>
   <% end %>
@@ -20,6 +19,5 @@
 <div>
   <%= link_to "Back to Dinosaurs", dinosaurs_path %> |
   <%= link_to "Edit this Dinosaur", edit_dinosaur_path(@dinosaur) %> |
-  <%= link_to "Delete this Dinosaur",
-dinosaur_path(@dinosaur),
-data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></div>
+  <%= link_to "Delete this Dinosaur", dinosaur_path(@dinosaur), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+</div>

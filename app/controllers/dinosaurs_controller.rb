@@ -46,5 +46,5 @@ def set_dinosaur
 end
 
 def dinosaur_params
-  params.require(:dinosaur).permit(:name, :group, :japanese)
+  params.require(:dinosaur).permit(:name, :group, :japanese, :image)
 end
